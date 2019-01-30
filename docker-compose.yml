@@ -1,14 +1,14 @@
 version: "2"
 services:
 
-  vertcoind:
-    image: lukechilds/vertcoind
+  bitcored:
+    image: dalijolijo/bitcored
     expose:
       - "5888"
     ports:
       - "5889:5889"
     volumes:
-      - ./data/vertcoind:/data
+      - ./data/bitcored:/data
     command: -rpcuser=electrum -rpcpassword=electrum
 
   electrumx:
@@ -18,6 +18,6 @@ services:
     volumes:
       - ./data/electrumx:/data
     environment:
-      - DAEMON_URL=http://electrum:electrum@vertcoind:5888
-      - COIN=Vertcoin
+      - DAEMON_URL=http://electrum:electrum@bitcored:5888
+      - COIN=Bitcore
       - DONATION_ADDRESS=Vh7P3xQZzQFqsrmQtZr9nZr12rySjos2Sv

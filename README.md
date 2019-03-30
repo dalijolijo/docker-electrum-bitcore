@@ -11,7 +11,7 @@ A Docker configuration with sane defaults for running a full Bitcore node behind
 docker-compose up
 ```
 
-This will pull the latest version of bitcored and ElectrumX, start syncing the blockchain, generate an SSL certificate and start listening for secure Electrum traffic on port 55002.
+This will pull the latest version of bitcored and ElectrumX, start syncing the blockchain, generate an SSL certificate and start listening for secure Electrum traffic on port 50002.
 
 All blockchain/bitcored data will be stored in `./data/bitcored` and all ElectrumX data will be stored in `./data/electrumx`. This is stored on the host machine and mounted in the docker container as a volume, meaning it will persist across reboots/updates/containers etc.
 

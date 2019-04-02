@@ -4,9 +4,9 @@ services:
   bitcored:
     image: dalijolijo/bitcored
     expose:
-      - "5888"
+      - "8556"
     ports:
-      - "5889:5889"
+      - "8555:8555"
     volumes:
       - ./data/bitcored:/data
     command: -rpcuser=electrum -rpcpassword=electrum
@@ -18,7 +18,7 @@ services:
     volumes:
       - ./data/electrumx:/data
     environment:
-      - DAEMON_URL=http://electrum:electrum@bitcored:5888
+      - DAEMON_URL=http://electrum:electrum@bitcored:8556
       - COIN=Bitcore
       - RPC_HOST=127.0.0.1
       - MAX_SESSIONS=100000 

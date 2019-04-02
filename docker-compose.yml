@@ -20,4 +20,5 @@ services:
     environment:
       - DAEMON_URL=http://electrum:electrum@bitcored:5888
       - COIN=Bitcore
-      - DONATION_ADDRESS=Vh7P3xQZzQFqsrmQtZr9nZr12rySjos2Sv
+      - RPC_HOST=127.0.0.1
+      - MAX_SESSIONS=100000 
